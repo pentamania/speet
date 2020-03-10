@@ -1,0 +1,32 @@
+{
+  "name": "speet",
+  "version": "1.0.0",
+  "description": "Simple dynamic spritesheet generator for web app",
+  "main": "lib/speet.js",
+  "unpkg": "dist/speet.js",
+  "module": "lib/speet.esm.js",
+  "types": "types/index.d.js",
+  "files": [
+    "dist",
+    "lib",
+    "types"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run build:lib",
+    "build:lib": "rollup -c",
+    "dev": "rollup -c -w",
+    "clean": "rimraf dist lib types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "pentamania",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "rollup": "^1.31.1",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "typescript": "^3.8.3"
+  }
+}
