@@ -1,6 +1,6 @@
 {
   "name": "speet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple dynamic spritesheet generator for web app",
   "main": "lib/speet.js",
   "unpkg": "dist/speet.js",
