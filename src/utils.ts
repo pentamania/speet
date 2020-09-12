@@ -24,11 +24,14 @@ export function isImage(obj: any) {
 export function loadImage(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject)=> {
     var img = new Image();
-    img.src = src;
-    img.crossOrigin = "Anonymous";
+
+    // For some reason, onload is not fired in old iOS safari when crossOrigin is set
+    // img.crossOrigin = "Anonymous";
+
     img.onload = function() {
       resolve(img);
     };
+    img.src = src;
     img.onerror = reject;
   });
 }
